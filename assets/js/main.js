@@ -80,18 +80,4 @@ document.addEventListener("DOMContentLoaded", () => {
       item.classList.toggle("open");
     });
   });
-
-  // Simple RSVP "fake submit" if using mailto or Google Form redirect
-  const rsvpForm = document.getElementById("rsvp-form");
-  if (rsvpForm) {
-    rsvpForm.addEventListener("submit", (e) => {
-      // Comment out next line if you're pointing this to a real external endpoint
-      e.preventDefault();
-
-      const name = rsvpForm.querySelector("input[name='guestName']")?.value || "Lovely human";
-      alert(`Thank you, ${name}! Your RSVP has been noted 🥂 (You can replace this with a real form handler later.)`);
-
-      rsvpForm.reset();
-    });
-  }
 });
