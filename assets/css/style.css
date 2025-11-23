@@ -21,12 +21,30 @@ body {
 
 /* ========== COLORS & THEME ========== */
 :root {
-  --teal: #007f8c;
-  --mustard: #f4b41a;
-  --deep-red: #b2223b;
-  --forest: #2f5d3a;
+  /* Palette from your screenshot 💍 */
+
+  /* Cool / green tones */
+  --aqua-light: #cce7e4;
+  --aqua-mid:   #97cdc3;
+  --sage:       #89a895;
+  --olive:      #555a48;
+  --olive-dark: #373125;
+
+  /* Warm tones */
+  --butter:     #f2cf79;
+  --orange:     #ec8a2c;
+  --brick:      #9d422a;
+  --plum:       #561a3e;
+
+  /* Theme mappings (used throughout the site) */
+  --teal:       var(--aqua-mid);
+  --mustard:    var(--butter);
+  --deep-red:   var(--brick);
+  --forest:     var(--olive);
+
+  /* Neutrals stay the same */
   --cream: #fffaf0;
-  --ink: #262626;
+  --ink:   #262626;
 
   --radius-xl: 18px;
   --shadow-soft: 0 8px 20px rgba(0,0,0,0.08);
@@ -225,7 +243,7 @@ body {
 .hero-photo {
   border-radius: var(--radius-xl);
   overflow: hidden;
-  background: linear-gradient(135deg, var(--mustard), var(--teal));
+  background: linear-gradient(135deg, var(--orange), var(--aqua-mid));
   padding: 0.5rem;
   box-shadow: var(--shadow-soft);
   transform: rotate(-1.5deg);
