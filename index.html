@@ -1,20 +1,111 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8"> <!-- IDK what this does yet -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- IDK what this does yet -->
-    <title>External CSS Example</title>
-    <link rel="stylesheet" href="styles.css">  <!-- Linking the CSS file -->
-    <script src="script.js" defer></script> <!-- Linking the javascript file -->
+  <meta charset="UTF-8" />
+  <title>Blu &amp; Berry · Wedding</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Wedding website for Blu &amp; Berry at Durham Castle, September 2026." />
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-<h1>Hello!</h1>
-<p>Welcome to Jeff and Karina's website!</p>
-<a href="transport.html">Transport</a>
-<a href="todo.html">TO DO LIST</a>
-<a href="itinerary.html">Wedding itinerary</a>
-<a href="dress_code.html">Dress code</a>
-<a href="gifts.html">Gifts</a>
-<button id="myButton">Click Me</button>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container navbar">
+      <div class="brand">
+        BLU ♥ BERRY
+        <span>Wedding</span>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="story.html">Our Story</a></li>
+        <li><a href="details.html">The Day</a></li>
+        <li><a href="travel.html">Travel & Stay</a></li>
+        <li><a href="wedding-party.html">Wedding Party</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="rsvp.html">RSVP</a></li>
+        <li><a href="registry.html">Gifts</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div>
+          <div class="hero-tag">
+            ✶ We're getting married!
+          </div>
+          <h1 class="hero-title">
+            Blu &amp; Berry are throwing a<br /><span>castle wedding</span>.
+          </h1>
+          <p class="hero-subtitle">
+            Expect autumn colours, cosy vibes, questionable dance moves and a whole lot of love in the middle of Durham.
+          </p>
+
+          <div class="hero-meta">
+            <div class="hero-pill">Durham Castle · 19 September 2026</div>
+            <div class="hero-pill">Dress code: Joyfully semi-fancy</div>
+          </div>
+
+          <div class="hero-actions">
+            <a href="rsvp.html" class="btn btn-primary">RSVP Online 🥂</a>
+            <a href="details.html" class="btn btn-secondary">See the Schedule</a>
+          </div>
+
+          <div class="hero-countdown">
+            <span>Countdown to “I do”:</span>
+            <span id="wedding-countdown">Loading...</span>
+          </div>
+        </div>
+
+        <div class="hero-photo">
+          <img src="assets/img/hero-placeholder.jpg" alt="Blu &amp; Berry looking adorable together" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid-2">
+        <div>
+          <h2 class="section-heading">What to expect</h2>
+          <p class="section-tagline">A little teaser of the day.</p>
+          <div class="card">
+            <ul class="ul-quirky">
+              <li>Vows in a castle, because obviously.</li>
+              <li>Cocktails in a barn, with folk-pop vibes and questionable sing-alongs.</li>
+              <li>Dinner and dancing under a tent, featuring your best/worst moves.</li>
+              <li>Cosy, colourful decor in teal, mustard, deep red and forest green.</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <h2 class="section-heading">Quick links</h2>
+          <p class="section-tagline">Planning heroes start here.</p>
+          <div class="card">
+            <ul class="ul-quirky">
+              <li><a href="travel.html">How to get to Durham &amp; where to sleep</a></li>
+              <li><a href="rsvp.html">RSVP &amp; song requests</a></li>
+              <li><a href="registry.html">Gifts (optional but cute)</a></li>
+              <li><a href="faq.html">Burning questions answered</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>Made with far too much coffee &amp; excitement · Blu &amp; Berry · Durham Castle · September 2026</p>
+      <p>Website lovingly handcrafted &amp; hosted on GitHub Pages.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
