@@ -23,27 +23,39 @@ document.addEventListener("DOMContentLoaded", () => {
   // Countdown (if element exists)
   const countdownEl = document.getElementById("wedding-countdown");
   if (countdownEl) {
-    // Adjust this date/time to your exact ceremony time
-    const weddingDate = new Date("2026-09-19T13:00:00+01:00"); // 19 Sept 2026, 1pm UK
-
+    // 5 September 2026 at 1pm UK time
+    const weddingDate = new Date("2026-09-05T13:00:00+01:00");
+  
     const updateCountdown = () => {
       const now = new Date();
       const diff = weddingDate - now;
-
+    
       if (diff <= 0) {
         countdownEl.textContent = "It's wedding time! 🎉";
         return;
       }
-
+    
       const days = Math.floor(diff / (1000 * 60 * 60 * 24));
       const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
       const minutes = Math.floor((diff / (1000 * 60)) % 60);
-
-      countdownEl.innerHTML = `<strong>${days}</strong> days, <strong>${hours}</strong> hours, <strong>${minutes}</strong> mins`;
+      const seconds = Math.floor((diff / 1000) % 60);
+    
+      countdownEl.innerHTML =
+        `<strong>${days}</strong>d ` +
+        `<strong>${hours}</strong>h ` +
+        `<strong>${minutes}</strong>m ` +
+        `<strong>${seconds}</strong>s`;
+    
+      // Trigger a little pulse animation on each update
+      countdownEl.classList.remove("countdown-pulse");
+      // force reflow so the animation restarts
+      void countdownEl.offsetWidth;
+      countdownEl.classList.add("countdown-pulse");
     };
-
+  
     updateCountdown();
-    setInterval(updateCountdown, 60000);
+    // update every second so it feels alive
+    setInterval(updateCountdown, 1000);
   }
 
   // Gallery lightbox
